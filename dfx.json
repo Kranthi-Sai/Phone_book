@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "contact_backend": {
+      "main": "src/contact_backend/main.mo",
+      "type": "motoko"
+    },
+    "contact_frontend": {
+      "dependencies": [
+        "contact_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/contact_frontend/src/index.html"
+      },
+      "source": [
+        "src/contact_frontend/assets",
+        "dist/contact_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
